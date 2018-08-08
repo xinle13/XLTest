@@ -15,6 +15,8 @@
 
 @implementation XLUtil
 
+//xinle 测试上传
+
 #pragma mark --返回横线
 +(UIView *)setUpLineWithFrame:(CGRect)frame{
     
