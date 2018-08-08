@@ -10,4 +10,6 @@
 
 @interface SuperClass : NSObject
 
+-(void)userMethod;
+
 @end

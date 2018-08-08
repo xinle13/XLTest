@@ -10,4 +10,18 @@
 
 @implementation SuperClass
 
++ (void)load{
+    
+    NSLog(@"SuperClass的load方法");
+}
+
++ (void)initialize
+{
+    NSLog(@"SuperClass的initialize方法");
+}
+
+-(void)userMethod{
+    NSLog(@"SuperClass的userMethod方法");
+}
+
 @end
