@@ -168,6 +168,7 @@
 		84702922210EBA9E005AB9E7 /* SuperClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 84702921210EBA9E005AB9E7 /* SuperClass.m */; };
 		84702925210EBAB3005AB9E7 /* SubClass1.m in Sources */ = {isa = PBXBuildFile; fileRef = 84702924210EBAB3005AB9E7 /* SubClass1.m */; };
 		84702928210EBB02005AB9E7 /* SuperClass+UserMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 84702927210EBB02005AB9E7 /* SuperClass+UserMethod.m */; };
+		84841D28211BF9B700FD44CA /* XLSaveTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 84841D27211BF9B700FD44CA /* XLSaveTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -513,6 +514,8 @@
 		84702924210EBAB3005AB9E7 /* SubClass1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SubClass1.m; sourceTree = "<group>"; };
 		84702926210EBB02005AB9E7 /* SuperClass+UserMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SuperClass+UserMethod.h"; sourceTree = "<group>"; };
 		84702927210EBB02005AB9E7 /* SuperClass+UserMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SuperClass+UserMethod.m"; sourceTree = "<group>"; };
+		84841D26211BF9B700FD44CA /* XLSaveTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSaveTool.h; sourceTree = "<group>"; };
+		84841D27211BF9B700FD44CA /* XLSaveTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLSaveTool.m; sourceTree = "<group>"; };
 		CE79636450DC72D261ADB9A6 /* Pods-XLTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XLTest/Pods-XLTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1127,6 +1130,8 @@
 		843D30CF211A829D00322EF4 /* XLTool */ = {
 			isa = PBXGroup;
 			children = (
+				84841D26211BF9B700FD44CA /* XLSaveTool.h */,
+				84841D27211BF9B700FD44CA /* XLSaveTool.m */,
 				843D30D0211A830500322EF4 /* GGHttpTool.h */,
 				843D30D1211A830500322EF4 /* GGHttpTool.m */,
 			);
@@ -1497,6 +1502,7 @@
 				8434C859211997B0001D394F /* NSButton+WebCache.m in Sources */,
 				8434C8F22119A33A001D394F /* TZGifPhotoPreviewController.m in Sources */,
 				8434C876211997B0001D394F /* IQTextView.m in Sources */,
+				84841D28211BF9B700FD44CA /* XLSaveTool.m in Sources */,
 				8434C84B211997B0001D394F /* FLAnimatedImageView+WebCache.m in Sources */,
 				8434C8E52119A33A001D394F /* TZAssetCell.m in Sources */,
 				8434C835211997B0001D394F /* MJRefreshAutoNormalFooter.m in Sources */,
