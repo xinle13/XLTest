@@ -169,6 +169,8 @@
 		84702925210EBAB3005AB9E7 /* SubClass1.m in Sources */ = {isa = PBXBuildFile; fileRef = 84702924210EBAB3005AB9E7 /* SubClass1.m */; };
 		84702928210EBB02005AB9E7 /* SuperClass+UserMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 84702927210EBB02005AB9E7 /* SuperClass+UserMethod.m */; };
 		84841D28211BF9B700FD44CA /* XLSaveTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 84841D27211BF9B700FD44CA /* XLSaveTool.m */; };
+		84876721212280F4002C7DCA /* SQChannelLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8487671D212280F4002C7DCA /* SQChannelLabel.m */; };
+		84876722212280F4002C7DCA /* FXColumnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 84876720212280F4002C7DCA /* FXColumnView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -516,6 +518,10 @@
 		84702927210EBB02005AB9E7 /* SuperClass+UserMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "SuperClass+UserMethod.m"; sourceTree = "<group>"; };
 		84841D26211BF9B700FD44CA /* XLSaveTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLSaveTool.h; sourceTree = "<group>"; };
 		84841D27211BF9B700FD44CA /* XLSaveTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLSaveTool.m; sourceTree = "<group>"; };
+		8487671D212280F4002C7DCA /* SQChannelLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQChannelLabel.m; sourceTree = "<group>"; };
+		8487671E212280F4002C7DCA /* SQChannelLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQChannelLabel.h; sourceTree = "<group>"; };
+		8487671F212280F4002C7DCA /* FXColumnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXColumnView.h; sourceTree = "<group>"; };
+		84876720212280F4002C7DCA /* FXColumnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXColumnView.m; sourceTree = "<group>"; };
 		CE79636450DC72D261ADB9A6 /* Pods-XLTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XLTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-XLTest/Pods-XLTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -1163,6 +1169,7 @@
 		8467E03820562FDB0047C0B3 /* XLTest */ = {
 			isa = PBXGroup;
 			children = (
+				8487671C2122807E002C7DCA /* XLTest */,
 				8434C7192119743D001D394F /* XLPrivateFile */,
 				8467E03920562FDB0047C0B3 /* AppDelegate.h */,
 				8467E03A20562FDB0047C0B3 /* AppDelegate.m */,
@@ -1220,6 +1227,17 @@
 				623E856ABBC6124B8CEC561D /* libPods-XLTest.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8487671C2122807E002C7DCA /* XLTest */ = {
+			isa = PBXGroup;
+			children = (
+				8487671F212280F4002C7DCA /* FXColumnView.h */,
+				84876720212280F4002C7DCA /* FXColumnView.m */,
+				8487671E212280F4002C7DCA /* SQChannelLabel.h */,
+				8487671D212280F4002C7DCA /* SQChannelLabel.m */,
+			);
+			path = XLTest;
 			sourceTree = "<group>";
 		};
 		9FDD7C9E9DEC1BEC1C9C601D /* Pods */ = {
@@ -1408,6 +1426,7 @@
 				8434C843211997B0001D394F /* NSObject+MJProperty.m in Sources */,
 				8434C831211997B0001D394F /* MJRefreshBackStateFooter.m in Sources */,
 				8434C845211997B0001D394F /* NSString+MJExtension.m in Sources */,
+				84876722212280F4002C7DCA /* FXColumnView.m in Sources */,
 				8434C8E72119A33A001D394F /* TZAssetModel.m in Sources */,
 				8434C867211997B0001D394F /* AFHTTPSessionManager.m in Sources */,
 				8434C883211997B0001D394F /* IQUIViewController+Additions.m in Sources */,
@@ -1459,6 +1478,7 @@
 				8434C8EC2119A33A001D394F /* TZProgressView.m in Sources */,
 				8434C8F02119A33A001D394F /* TZImagePickerController.m in Sources */,
 				8434C87F211997B0001D394F /* IQUIWindow+Hierarchy.m in Sources */,
+				84876721212280F4002C7DCA /* SQChannelLabel.m in Sources */,
 				8434C71E2119771B001D394F /* XLConst.m in Sources */,
 				8434C88E21199A26001D394F /* FLAnimatedImage.m in Sources */,
 				8434C85D211997B0001D394F /* NSData+ImageContentType.m in Sources */,

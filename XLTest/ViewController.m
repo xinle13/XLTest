@@ -13,6 +13,8 @@ typedef int(^TextXLBlock)(void);
 #import "SuperClass.h"
 //#import "SuperClass+UserMethod.h"
 #import "SubClass1.h"
+#import "FXColumnView.h"
+#import "SQChannelLabel.h"
 
 @interface ViewController ()
 
@@ -27,6 +29,9 @@ typedef int(^TextXLBlock)(void);
 
 @property (nonatomic, strong)UILabel *lbl;
 
+@property (nonatomic, strong)FXColumnView *columnView;
+
+
 @end
 
 @implementation ViewController
@@ -35,6 +40,10 @@ typedef int(^TextXLBlock)(void);
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 LOG(@"~~~~");
+    
+    //我就是想试试看滚动的顶部视图
+    [self prepareColumnView:@[@"一一一一一一",@"二二",@"三三三",@"四四四四",@"五",@"六六六",@"七七",@"八八八八八八"]];
+    
 }
 
 
@@ -350,6 +359,56 @@ static int b = 2;
     }
 }
 
-//OC中的链表是什么概念?
+- (void)prepareColumnView:(NSArray<NSString *> *)columns{
+    
+    self.columnView = [[FXColumnView alloc] init];
+    self.columnView.columnHeight = 31;
+    self.columnView.boundaryMargin = 15;
+    self.columnView.margin = 18;
+    self.columnView.labelHighlightedColor = HEX_COLOR(0x333333);
+    self.columnView.labelNormalColor = HEX_COLOR(0x777777);
+    self.columnView.labelNormalFontSize = 18;
+    self.columnView.labelHighlightedFontSize = 19;
+    __weak typeof(self) weakself = self;
+    self.columnView.labelTapped = ^(NSUInteger index) {
+        
+        [weakself adjustScrollViewContentX:weakself.columnView.scrollView.subviews[index]];
+    };
+    self.columnView.indicatorLine.backgroundColor = HEX_COLOR(0xb83f38);
+    self.columnView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:self.columnView];
+    
+    
+    [self.columnView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).offset(64);
+        make.left.equalTo(self.view);
+        make.right.equalTo(self.view);
+        make.height.equalTo(@31);
+    }];
+  
+    self.columnView.columns = columns;
+    
+    // 设置底部有条线的背景图
+    [self.columnView layoutIfNeeded];
+    self.columnView.backgroundColor = [UIColor whiteColor];
+}
+
+- (void)adjustScrollViewContentX:(SQChannelLabel *)sender
+{
+    
+    CGPoint point = sender.frame.origin;
+    CGFloat with = sender.frame.size.width;
+    if (point.x + with / 2 > _columnView.scrollView.contentSize.width-WIDTH / 2) {
+        point.x = _columnView.scrollView.contentSize.width - WIDTH + 20;
+    } else if (point.x + with / 2 < WIDTH / 2){
+        point.x = 0;
+    } else {
+        point.x = point.x + with / 2 - WIDTH / 2;
+    }
+    [_columnView.scrollView setContentOffset:point animated:YES];
+    UIView *line = self.columnView.indicatorLine;
+    line.width = sender.width;
+    line.centerX = sender.centerX;
+}
 
 @end
